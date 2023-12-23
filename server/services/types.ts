@@ -3,6 +3,13 @@ export type User = {
   name: string
 }
 
+export type UserToken = {
+  id: string,
+  token: string,
+  refreshToken: string,
+  userId: string
+}
+
 export type UserPayload = Omit<User, 'id'>;
 
 export type GetUsers = () => Promise<User[]>;
@@ -17,6 +24,12 @@ export type UserService = {
   updateUser: UpdateUser,
   createUser: CreateUser,
   deleteUser: DeleteUser
+}
+
+export type VerifyToken = (token: string) => Promise<User|undefined>;
+
+export type AuthService = {
+  verifyToken: VerifyToken
 }
 
 export type Service = {
