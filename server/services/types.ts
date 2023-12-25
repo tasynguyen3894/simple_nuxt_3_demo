@@ -36,10 +36,10 @@ export type IssueUserToken = (userId: string) => Promise<{
   token: string,
   refreshToken: string
 } | undefined>;
-export type VerifyToken = (token: string) => Promise<UserRead|undefined>;
+export type VerifyToken = (token: string) => Promise<boolean>;
 
 export type AuthService = {
-  // verifyToken: VerifyToken,
+  verifyToken: VerifyToken,
   issueUserToken: IssueUserToken
 }
 
