@@ -50,7 +50,7 @@ export function getUserService(): UserService {
           return true;
         }
         return false;
-      }));
+    }));
       return Promise.resolve(hasDeletedUser);
     },
     async verifyUserPassword(verifyUsername: string, verifyPassword: string) {

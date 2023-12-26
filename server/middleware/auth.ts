@@ -5,7 +5,8 @@ const nonRequireTokenPaths: string[] = [
 ];
 
 export default defineEventHandler(async (event) => {
-  if(!nonRequireTokenPaths.includes(getRequestPath(event))) {
+  const path = getRequestPath(event);
+  if(path.startsWith('/api') && !nonRequireTokenPaths.includes(path)) {
     const token = getRequestHeader(event, 'X-Token');
     const authService = getService().getAuthService();
     if(!token || !(await authService.verifyToken(token))) {

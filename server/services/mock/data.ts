@@ -7,7 +7,7 @@ let mockUser: User[] = [
     id: uuidv4(),
     name: 'User 1',
     username: 'username_1',
-    password: '$2b$10$nuwEAc0.ifY4CR2xJMVZReYBvLtp1S3NEv.8i3hxeJNHVZNoEEBXG' // Password: s0/\/\P4$$w0rD
+    password: '$2b$10$iHut9R3BDooGM..VAowEWO4K3OLMwwV9CCjbsVgI3.CtDApnJ/eN6' // Password: s0m3P4$$w0rD
   }
 ];
 
